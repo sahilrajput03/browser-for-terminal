@@ -10,3 +10,4 @@
 <Command initial={{ command: 'cd src; ls', live: true }} />
 <Command initial={{ command: 'badCommand && ls', live: true }} />
 <Command initial={{ command: 'date && ls', live: true }} />
+<Command initial={{ command: 'sleep 3 && ls -al', live: false }} />
