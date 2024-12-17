@@ -1,3 +1,15 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+button{
+    padding: 10px 50px;
+    border: 1px solid grey;
+    border-radius: 7px;
+}
+
+input{
+    padding: 10px 10px;
+    border-radius: 7px;
+}
