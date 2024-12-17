@@ -1,5 +1,7 @@
 <script>
 	import { updated } from '$app/state';
+
+	// & Please make sure you add necessary changes `version.pollInterval` property to `svelte.config.js` (refer this project's file reference)
 </script>
 
 <!-- SveltKit Tutorial -->
