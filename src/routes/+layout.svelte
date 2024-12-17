@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { dev } from '$app/environment';
+	import NewVersionAvailableToast from '../NewVersionAvailableToast.svelte';
 
 	let { children } = $props();
 </script>
@@ -58,4 +59,6 @@
 	</div>
 
 	{@render children()}
+
+	<NewVersionAvailableToast />
 </div>
