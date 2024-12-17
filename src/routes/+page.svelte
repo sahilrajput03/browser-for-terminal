@@ -5,9 +5,9 @@
 <div class="p-4">
 	<h1 class="mb-5 text-2xl font-bold">Browser For Terminal</h1>
 
-	<Command initial="pwd" />
-	<Command initial="ls" />
-	<Command initial="ls -al" />
-	<Command initial="ls -al src/" />
-	<Command initial="cat package.json" />
+	<Command initial={{ command: 'pwd', live: true }} />
+	<Command initial={{ command: 'ls', live: true }} />
+	<Command initial={{ command: 'ls -al', live: true }} />
+	<Command initial={{ command: 'ls -al src/', live: true }} />
+	<Command initial={{ command: 'cat package.json', live: true }} />
 </div>
