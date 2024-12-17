@@ -36,7 +36,7 @@
 		<!-- Navigation Links -->
 		<div class="text-sm">
 			<a class="mr-2 text-blue-600 underline" href="/">Home</a>
-			<a class="text-blue-600 underline" href="examples">Examples</a>
+			<a class="text-pink-400 underline hover:text-pink-700" href="examples">Examples</a>
 		</div>
 	</div>
 
