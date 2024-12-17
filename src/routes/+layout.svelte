@@ -11,7 +11,7 @@
 	<div class="mb-3">
 		<div>
 			<a href="/">
-				<h1 class="mb-2 text-2xl font-bold hover:text-blue-600">Browser For Terminal</h1>
+				<h1 class="mb-2 text-2xl font-bold hover:text-pink-400">Browser For Terminal</h1>
 			</a>
 			{#if dev}
 				<div class="text-xs italic">
