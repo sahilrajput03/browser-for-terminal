@@ -17,7 +17,7 @@
 	// $inspect({ command, live });
 
 	const runCommand = async () => {
-		// console.log('ran command..:'); // debug
+		console.log('ran command..:'); // debug
 		const response = await fetch('/', {
 			method: 'POST',
 			body: JSON.stringify({ command }),
