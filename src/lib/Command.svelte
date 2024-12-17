@@ -49,7 +49,7 @@
 				}
 			}}
 		/>
-		<button onclick={() => runCommand()}>Run</button>
+		<button class="active:bg-green-500" onclick={() => runCommand()}>Run</button>
 		<label class="select-none"> <input type="checkbox" bind:checked={live} /> Live </label>
 		{@render componentDebugger()}
 	</div>
