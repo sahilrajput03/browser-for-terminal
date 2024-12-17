@@ -28,10 +28,27 @@
 
 		<br />
 
-		<i class="text-xs text-green-500">
-			With great power comes great responsibility!
-			<span class="text-xs text-gray-500"> (Tip: Use Enter to run command in non-live mode) </span>
-		</i>
+		<div class="flex justify-between">
+			<i class="text-xs text-green-500">
+				With great power comes great responsibility!
+				<span class="text-xs text-gray-500">
+					(Tip: Use Enter to run command in non-live mode)
+				</span>
+			</i>
+
+			<a
+				class="flex items-center text-right text-xs text-blue-600"
+				target="_blank"
+				href="https://github.com/sahilrajput03/browser-for-terminal"
+			>
+				View on Github
+				<img
+					class="w-[20px]"
+					src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
+					alt="github here"
+				/>
+			</a>
+		</div>
 
 		<!-- Navigation Links -->
 		<div class="text-sm">
