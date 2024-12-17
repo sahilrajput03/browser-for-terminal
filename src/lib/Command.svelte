@@ -12,7 +12,8 @@
 	let live = $state(initial.live ?? defautlProps.live);
 	let stderr = $state('');
 	let stdout = $state('');
-	let error = $state(null) as any;
+	let error = $state(undefined) as any;
+	let showDebugger = $state(false);
 
 	// $inspect({ command, live });
 
@@ -49,7 +50,8 @@
 			}}
 		/>
 		<button onclick={() => runCommand()}>Run</button>
-		<label> <input type="checkbox" bind:checked={live} /> Live </label>
+		<label class="select-none"> <input type="checkbox" bind:checked={live} /> Live </label>
+		{@render componentDebugger()}
 	</div>
 
 	{#if stdout || stderr || error}
@@ -64,5 +66,12 @@
 	{/if}
 </div>
 
-<!-- <h2 class="mt-3 text-2xl">Debugger</h2> -->
-<!-- <pre><div>{JSON.stringify({ cache }, null, 2)}</div></pre> -->
+{#snippet componentDebugger()}
+	<label class="select-none text-xs">
+		<input class="ml-3 h-2 w-2" type="checkbox" bind:checked={showDebugger} /> Debugger
+	</label>
+
+	{#if showDebugger}
+		<pre><div>{JSON.stringify({ command, stdout, stderr, error: error ?? '' }, null, 2)}</div></pre>
+	{/if}
+{/snippet}
