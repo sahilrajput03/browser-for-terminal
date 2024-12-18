@@ -2,4 +2,4 @@
 	import Command from '$lib/Command.svelte';
 </script>
 
-<Command initial={{ command: 'pwd', live: true }} />
+<Command initial={{ command: 'pwd', live: false }} />

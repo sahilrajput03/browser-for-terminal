@@ -11,3 +11,9 @@
 <Command initial={{ command: 'badCommand && ls', live: true }} />
 <Command initial={{ command: 'date && ls', live: true }} />
 <Command initial={{ command: 'sleep 3 && ls -al', live: false }} />
+<!-- Example for running command in a given directory -->
+
+<div>
+	Example for running command in given directory via prop <code class="text-xs">cwd: '/Users'</code>
+</div>
+<Command initial={{ command: 'pwd', live: true, cwd: '/Users' }} />

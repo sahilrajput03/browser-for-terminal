@@ -1,11 +1,12 @@
 <script lang="ts">
 	type PropType = {
 		initial: {
-			command?: string;
-			live?: boolean;
+			command: string; // user must give `command`
+			live: boolean; // user must give `live`
+			cwd?: string; // current working directory
 		};
 	};
-	const defautlProps = { command: '', live: true };
+	const defautlProps = { command: '', live: false, cwd: undefined };
 	const { initial = defautlProps }: PropType = $props();
 
 	let command = $state(initial.command ?? defautlProps.command); // pwd, ls, cat package.json,
@@ -21,7 +22,7 @@
 		console.log('ran command..:'); // debug
 		const response = await fetch('/', {
 			method: 'POST',
-			body: JSON.stringify({ command }),
+			body: JSON.stringify({ command, cwd: initial.cwd }),
 			headers: {
 				'Content-Type': 'application/json'
 			}
