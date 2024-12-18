@@ -50,9 +50,31 @@
 				}
 			}}
 		/>
-		<button class="active:bg-green-500" onclick={() => runCommand()}>Run</button>
+		<button class="px-[50px] py-[5px] active:bg-green-500" onclick={() => runCommand()}>Run</button>
 		<label class="select-none"> <input type="checkbox" bind:checked={live} /> Live </label>
 		{@render componentDebugger()}
+		<button
+			disabled={command === ''}
+			class="px-[4px] py-[1px] text-[0.7rem] disabled:bg-gray-300 disabled:text-gray-600"
+			onclick={() => (command = '')}>Clear command</button
+		>
+		<button
+			disabled={stderr === '' && stdout === ''}
+			class="px-[4px] py-[1px] text-[0.7rem] disabled:bg-gray-300 disabled:text-gray-600"
+			onclick={() => {
+				stderr = '';
+				stdout = '';
+			}}>Clear output</button
+		>
+		<button
+			disabled={command === '' && stderr === '' && stdout === ''}
+			class="px-[4px] py-[1px] text-[0.7rem] disabled:bg-gray-300 disabled:text-gray-600"
+			onclick={() => {
+				command = '';
+				stderr = '';
+				stdout = '';
+			}}>Clear command and output</button
+		>
 	</div>
 
 	{#if stdout || stderr || error}
